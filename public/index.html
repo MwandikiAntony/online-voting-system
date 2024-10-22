@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Online Voting System</title>
+</head>
+<body>
+
+    <h1>Online Voting System</h1>
+
+    <div class="form-container" id="authForms">
+        <!-- Sign Up Form -->
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <label for="signupUsername">Username:</label>
+            <input type="text" id="signupUsername" name="username" required>
+            
+            <label for="signupPassword">Password:</label>
+            <input type="password" id="signupPassword" name="password" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" name="username" required>
+            
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div class="form-container" id="votingPage" style="display: none;">
+        <h2>Vote for Your Candidate</h2>
+        <!-- Add your voting options here -->
+        <p>Your voting options will be displayed here after logging in.</p>
+        <button id="logoutButton">Logout</button>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-3">
+        <h1>Online Voting System</h1>
+    </header>
+
+    <section id="vote" class="container mt-5">
+        <h2 class="text-center mb-4">Cast Your Vote</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form id="voteForm">
+                    <div class="form-group mb-3">
+                        <label for="candidate">Choose a Candidate:</label>
+                        <select id="candidate" name="candidate" class="form-control">
+                            <option value="candidate1">Candidate 1</option>
+                            <option value="candidate2">Candidate 2</option>
+                            <option value="candidate3">Candidate 3</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Submit Vote</button>
+                </form>
+                <div id="message" class="mt-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Online Voting System</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
